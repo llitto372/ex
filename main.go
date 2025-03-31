@@ -38,10 +38,11 @@ func main() {
 
 	close(resultCh)
 
-	// for value := range resultCh {
-	// 	for _, val := range value {
-	// 		fmt.Println(val)
-	// 	}
-	// }
-	fmt.Println(<-resultCh)
+	for value := range resultCh {
+		for _, val := range value {
+			fmt.Println(val)
+		}
+	}
+
+	// fmt.Println(<-resultCh)
 }
